@@ -3,24 +3,22 @@ package Lesson_4;
 public class CatDemo {
     public static void main(String[] args) {
         // Создаем объекты котов
-        Cat cat1 = new Cat("Barsik", 200, 0);
-        Cat cat2 = new Cat("Murzik", 170, 0);
+        Cat[] cats = {
+                new Cat("Барсик", 200, 0, 50), // Передаем количество еды в тарелке
+                new Cat("Мурзик", 150, 0, 50),
+                new Cat("Рыжик", 180, 0, 50)
+        };
+        // Создаем тарелку с едой
+        Plate plate = new Plate(100);
 
-        // Выводим информацию о котах
-        System.out.println("Информация о котах:");
-        System.out.println(cat1.name + ": Максимальная дистанция бега - " + cat1.runLimit + " м, Максимальная дистанция плавания - " + cat1.swimLimit + " м");
-        System.out.println(cat2.name + ": Максимальная дистанция бега - " + cat2.runLimit + " м, Максимальная дистанция плавания - " + cat2.swimLimit + " м");
+        // Просим всех котов покушать из тарелки
+        for (Cat cat : cats) {
+            cat.eat(plate.getFood()); // Кот пытается поесть из тарелки
+            System.out.println("Кот " + cat.getName() + " голоден: " + cat.isHungry()); // Выводим информацию о состоянии голода кота
+        }
 
-        // Проверяем, голоден ли кот
-        System.out.println("Кот " + cat1.name + " голоден: " + cat1.isHungry());
-        System.out.println("Кот " + cat2.name + " голоден: " + cat2.isHungry());
-
-        // Кормим котов
-        cat1.eat(100);
-        cat2.eat(-50); // Попытка съесть отрицательное количество еды
-
-        // Проверяем, голоден ли кот после кормежки
-        System.out.println("Кот " + cat1.name + " голоден после кормежки: " + cat1.isHungry());
-        System.out.println("Кот " + cat2.name + " голоден после кормежки: " + cat2.isHungry());
+        // Добавляем еду в тарелку
+        plate.addFood(50);
+        System.out.println("Теперь в тарелке " + plate.getFood() + " еды");
     }
 }
