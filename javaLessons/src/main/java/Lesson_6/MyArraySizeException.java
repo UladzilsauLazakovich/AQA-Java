@@ -18,7 +18,7 @@ class ArrayProcessor {
 
         // Проверка размера массива
         if (array.length != 4 || array[0].length != 4)
-            throw new MyArraySizeException("Массив должен быть размером 4x4");
+            throw new MyArraySizeException("Массив1 должен быть размером 4x4");
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
