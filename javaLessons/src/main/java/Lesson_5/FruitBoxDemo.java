@@ -18,7 +18,7 @@ public class FruitBoxDemo {
         // Вес коробок
         System.out.println("Weight of appleBox1: " + appleBox1.getWeight()); // Вес яблок = 1.0 * количество яблок
         System.out.println("Weight of appleBox2: " + appleBox2.getWeight());
-        System.out.println("Weight of orangeBox: " + orangeBox.getWeight()); // Вес апельсинов = 1.5 * количество апельсинов
+        System.out.println("Weight of orangeBox: " + orangeBox.getWeight()); // Вес апельсинов = 1.5 * количество апельсино
 
         // Сравнение коробок
         System.out.println("Are appleBox1 and appleBox2 equal in weight? " + appleBox1.compare(appleBox2));
