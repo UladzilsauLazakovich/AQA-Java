@@ -12,6 +12,7 @@ public class CsvDataLoader {
         BufferedReader reader = new BufferedReader(new FileReader(fileName));
 
         // Читаем заголовок
+        // CsvDataLoader
         String headerLine = reader.readLine();
         String[] header = headerLine.split(";");
 
