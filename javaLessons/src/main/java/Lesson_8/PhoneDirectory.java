@@ -33,7 +33,7 @@ public class PhoneDirectory {
         phoneDirectory.add("Сидоров", "555555555");
         phoneDirectory.add("Сидоров", "111111111");
         phoneDirectory.add("Сидоров", "222222222");
-        phoneDirectory.add("Сидоров", "333333333");
+        phoneDirectory.add("Иванов", "333333333");
         phoneDirectory.add("Сидоров", "444444444");
         phoneDirectory.add("Сидоров", "555555555");
         phoneDirectory.add("Иванов", "666666666");
